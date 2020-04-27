@@ -1,15 +1,9 @@
-
-
 cmake_minimum_required(VERSION 3.1)
 
-
-project(test)
-
+project(decode)
 
 find_package(OpenCV REQUIRED)
 
+add_executable(decode decode.cpp)
 
-add_executable(test test.cpp)
-
-# Link your application with OpenCV libraries
-target_link_libraries(test PRIVATE ${OpenCV_LIBS})
+target_link_libraries(decode PRIVATE ${OpenCV_LIBS})
