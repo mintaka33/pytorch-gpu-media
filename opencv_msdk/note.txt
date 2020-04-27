@@ -1,7 +1,0 @@
-
-ffmpeg -f lavfi -i testsrc2 -vframes 10 test.264 -y
-
-
-cmake -DCMAKE_SHARED_LINKER_FLAGS=-Wl,-Bsymbolic -DINSTALL_CREATE_DISTRIB=ON \
--DWITH_FFMPEG=ON -DBUILD_EXAMPLES=ON -DWITH_MFX=ON -DCMAKE_BUILD_TYPE=Debug \
-../../source/opencv-4.3.0
