@@ -9,6 +9,17 @@ cmake -DCMAKE_SHARED_LINKER_FLAGS=-Wl,-Bsymbolic -DINSTALL_CREATE_DISTRIB=ON \
 ../../source/opencv-4.3.0
 ```
 
+## build opencv with python
+
+```bash
+cmake -DCMAKE_SHARED_LINKER_FLAGS=-Wl,-Bsymbolic -DINSTALL_CREATE_DISTRIB=ON \
+-DWITH_FFMPEG=ON -DBUILD_EXAMPLES=ON -DWITH_MFX=ON -DCMAKE_BUILD_TYPE=Debug \
+-DBUILD_opencv_python3=ON -DHAVE_opencv_python3=ON -DBUILD_NEW_PYTHON_SUPPORT=ON \
+-DPYTHON_DEFAULT_EXECUTABLE=/usr/bin/python3 -DCMAKE_executable=/usr/bin/python3 \
+-DPYTHON_EXECUTABLE=/usr/bin/python3 \
+../../source/opencv-4.3.0
+```
+
 ```bash
 ffmpeg -f lavfi -i testsrc2 -vframes 10 test.264 -y
 ```
